@@ -1,0 +1,28 @@
+Recibes las primeras filas de una tabla extraída de un PDF técnico.
+Las primeras filas pueden ser encabezados, posiblemente en varios niveles
+(un encabezado general que abarca varias columnas, con sub-encabezados
+debajo). El resto son filas de datos.
+
+TU TAREA: determinar los nombres definitivos de columna y cuántas filas
+iniciales son encabezado.
+
+REGLAS:
+- Devuelve ÚNICAMENTE JSON, sin texto antes ni después.
+- La lista "columnas" debe tener EXACTAMENTE el número de columnas indicado,
+  uno por cada columna, en orden.
+- Fusiona los niveles de encabezado cuando corresponda. Si un encabezado
+  general abarca varias columnas con sub-nombres, combínalos de forma que
+  cada nombre quede único y conserve el contexto del nivel superior
+  (ej: encabezado "Dimensiones [pulgadas]" con sub-nombre "A" => "A [pulgadas]").
+- Corrige cortes evidentes de palabras (ej: "Carcasa de Moto" + "r" en la
+  columna siguiente => "Carcasa de Motor", y la columna siguiente recupera
+  su nombre real, ej "AK Fit").
+- NO traduzcas. Usa el idioma y vocabulario EXACTO del documento.
+- NO inventes nombres que no estén sugeridos por el texto. Si una columna
+  no tiene nombre identificable, usa "col_N" donde N es su índice (base 0).
+
+FORMATO DE RESPUESTA:
+{
+  "num_filas_header": número,
+  "columnas": ["nombre1", "nombre2", ...]
+}

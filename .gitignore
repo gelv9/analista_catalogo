@@ -1,0 +1,29 @@
+# Entorno virtual
+venv/
+
+# Variables de entorno (API keys)
+.env
+
+# Base de datos vectorial local
+qdrant_storage/
+
+# Carpetas de trabajo temporal
+outputs/
+temp/
+
+# Scripts de prueba manual
+probar_comparador.py
+probar_deteccion.py
+probar_render.py
+revisar.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+.byaldi/
+fixtures/*.pdf
+fixtures/*.png

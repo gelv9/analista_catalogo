@@ -1,0 +1,9 @@
+# Nunca copiar al contenedor
+.env
+venv/
+qdrant_storage/
+outputs/
+temp/
+__pycache__/
+*.pyc
+.git/
